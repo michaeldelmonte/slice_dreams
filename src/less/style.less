@@ -1,0 +1,595 @@
+@blue        : #36b9eb; /* underlines */
+@light-red   : #ee4537; /* hover nav */
+@gloss-gray  : #cccccc; /* header p  */
+@dark-gray   : #222222; /* heading */
+@light-brown : #888888; /* paragraph */
+@light-gray  : #f7f7f7; /* amazing port bg */
+@light-blue  : #35c2f8; /* button hover */
+@brown-gray  : #777777; /* default icon color */
+@white       : #fff;
+@black       : #000;
+@dirty-white : #f1f1f1;
+@gray-white  : #bbbbbb;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+p {
+  color: @light-brown;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: @dark-gray;
+  font-weight: 700;
+}
+
+
+/*
+  ================= ANIMATIONS ===================
+*/
+
+#home-cover,
+#home-heading,
+#home-description {
+  animation-duration: 1s;
+}
+
+#home-cover {
+  animation-delay: .1s;
+}
+
+#home-heading {
+  animation-delay: .5s;
+}
+
+#home-description {
+  animation-delay: 1s;
+}
+
+/*
+  ================= BACKGROUND PARALLAX ===================
+*/
+
+.bg-parallax {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  background-attachment: fixed;
+}
+
+/*
+  ================= GENERIC BUTTON ===================
+*/
+
+.btn-general {
+  text-transform: uppercase;
+  border: 1px solid @light-blue;
+  border-radius: 50px;
+  padding: 19px 40px;
+}
+.btn-blue {
+  color: @white;
+  font-size: 16px;
+  margin: 10px 0;
+  background-color: @light-blue;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+
+  &:hover, &:focus {
+    color: @dark-gray;
+    background-color: @white;
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/*
+  ================= GENERIC UNDERLINE ===================
+*/
+
+.content-underline {
+  height: 1px;
+  width: 110.34px;
+  background-color: @light-blue;
+  margin: 40px auto;
+}
+
+.content-title h3 {
+  font-size: 40px;
+  color: @dark-gray;
+  text-align: center;
+}
+
+/*
+  ================= GENERIC CONTENT BOX ===================
+*/
+
+.content-box {
+  padding: 100px 0;
+}
+
+/*
+  ================= HOME SECTION ===================
+*/
+
+#home {
+  height: 100%;
+
+  #home-cover {
+  height: 100%;
+  background-image: url("/img/HeaderBackground.jpg");
+
+    #home-content-box {
+      background: rgba(0, 0, 0, 0.75);
+
+      width: 100%;
+      height: 100%;
+      display: table;
+
+      #home-content-box-inner {
+        display: table-cell;
+        vertical-align: middle;
+
+        #home-heading h1 {
+          color: @white;
+          font-size: 50px;
+          margin: 0 0 10px;
+        }
+
+        #home-description p {
+          font-size: 20px;
+          color: @gloss-gray;
+        }
+      }
+    }
+  }
+}
+
+/*
+  ================= SERVICES SECTION ===================
+*/
+
+#services {
+  .content-box .content-title h3 {
+    margin-top: 0;
+  }
+}
+
+.service-item {
+  margin-top: 40px;
+
+  .service-item-icon {
+    margin-bottom: 40px;
+  }
+
+  .service-item-title h3 {
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  .service-item-description p {
+    font-size: 14px;
+  }
+}
+
+/*
+  ================= EXPERTISE SECTION ===================
+*/
+
+#expertise {
+  background-color: @light-gray;
+}
+#expertise-cover {
+  height: 663px;
+  float: right;
+  width: 30%;
+  background-image: url("/img/ExpertiseCover.jpg");
+  background-size: contain;
+}
+#expertise-content-box {
+  padding-left: 15%;
+  background-color: @light-gray;
+  height: 663px;
+  float: left;
+}
+#expertise-content-box-outer {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+#expertise-content-box-inner {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 100px 0;
+
+  .content-title h3 {
+    text-align: left;
+    margin: 0 0 20px;
+  }
+
+  #expertise-description p {
+    font-size: 16px;
+    color: @brown-gray;
+    margin-bottom: 60px;
+  }
+
+  .row.no-gutters {
+    [class*=col-md-] {
+      padding: 0;
+    }
+  }
+}
+
+.expertise-item {
+  padding: 0 20px 0 0;
+  margin: 0 30px 30px 0;
+
+  #expertise-item-icon-setup {
+    background-image: url("/img/GearIcon.png");
+  }
+
+  #expertise-item-icon-cloud {
+    background-image: url("/img/CloudIcon.png");
+    width: 42px;
+  }
+
+  #expertise-item-icon-support {
+    background-image: url("/img/StarIcon.png");
+  }
+
+  #expertise-item-icon-lock {
+    background-image: url("/img/LockIcon.png");
+    margin-right: 32px;
+  }
+
+  .expertise-item-icon span {
+    display: inline-block;
+    width: 30px;
+    height: 70px;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .expertise-item-title h3 {
+    font-size: 14px;
+    color: @dark-gray;
+    font-weight: 500;
+    margin: 0 0 13px;
+  }
+
+  .expertise-item-description p {
+    font-size: 14px;
+    color: @brown-gray;
+    padding-left: 46px;
+    margin: 0;
+  }
+
+  .expertise-icon-bg {
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    width: 30px;
+    height: 100px;
+  }
+}
+
+/*
+  ================= AMAZING PORTFOLIO SECTION ===================
+*/
+
+.portfolio-cover-col {
+  padding: 0;
+}
+
+#portfolio-cover {
+  height: 900px;
+  width: 44%;
+  float: right;
+  background-image: url("/img/iPadAir.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#portfolio-content-box {
+  float: left;
+  height: 700px;
+  padding-left: 20%;
+}
+#portfolio-content-box-outer {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+#portfolio-content-box-inner {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 100px 0;
+
+  .content-title h3 {
+    text-align: left;
+    margin: 0 0 56px;
+  }
+}
+
+#portfolio-items-cover {
+  height: 77%;
+  width: 100%;
+  background-image: url("/img/UsersIcon.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#portfolio-description p {
+  font-size: 14px;
+  margin-bottom: 43px;
+  color: @brown-gray;
+}
+.portfolio-item {
+  float: left;
+}
+.portfolio-icon-bg {
+  float: left;
+  margin-right: 18px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+.portfolio-item-title h3 {
+  font-size: 16px;
+  margin: 0 0 17px;
+  font-weight: 500;
+}
+.portfolio-item-title p {
+  font-size: 14px;
+  color: @brown-gray;
+}
+
+.portfolio-img {
+  overflow: hidden;
+
+  &:hover {
+    img {
+      transition: transform ease .5s;
+      transform: scale(1.5);
+      cursor: zoom-in;
+    }
+  }
+}
+
+/*
+  ================= PORTFOLIO SECTION ===================
+*/
+
+#portfolio {
+  .row.no-gutters {
+    [class*=col-md-] {
+      padding: 0;
+    }
+
+    .portfolio-img img {
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+}
+
+/*
+  ================= PORTFOLIO SECTION ===================
+*/
+
+#about {
+
+  .content-title {
+    margin-bottom: 85px;
+  }
+
+  .about-us-title h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 11px 0 0 0;
+  }
+
+  .about-us-description p {
+    font-size: 14px;
+    margin: 24px 0;
+  }
+
+  .about-us-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 5px solid @dirty-white;
+    margin-bottom: 95px;
+  }
+  #about-img-1 {
+    background-image: url("/img/a1.jpg");
+  }
+  #about-img-2 {
+    background-image: url("/img/a2.jpg");
+  }
+  #about-img-3 {
+    background-image: url("/img/a3.jpg");
+  }
+  #about-img-4 {
+    background-image: url("/img/a4.jpg");
+  }
+  #about-img-5 {
+    background-image: url("/img/a5.jpg");
+    width: 183px;
+    height: 183px;
+  }
+}
+/*
+  ================= MEMBERS SECTION ===================
+*/
+#team-members {
+  margin-top: 40px;
+
+  .team-member-description p {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+}
+
+.team-member {
+  img {
+    max-width: 221px;
+    max-height: 221px;
+    margin: 0 auto;
+  }
+
+  .team-member-info {
+    padding: 10px 0 30px 0;
+
+    .team-member-name {
+      text-transform: none;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .team-member-designation {
+      text-transform: none;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}
+
+.social-list {
+  padding-left: 0;
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: @black;
+  }
+}
+
+.social-icon {
+  font-size: 20px;
+}
+
+.icon-white {
+  color: @white;
+}
+/*
+  ================= CONTACT SECTION ===================
+*/
+
+#contact {
+  background-color: @black;
+  padding: 100px 0;
+}
+
+#contact-left h3, #contact-left p {
+  color: @white;
+}
+
+#contact-left {
+  h3 {
+    margin-top: 0;
+    margin-bottom: 36px;
+    font-size: 40px;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+
+#contact-container {
+
+  .contact-info {
+    .contact-details {
+      padding: 10px 10px 10px 0;
+      display: inline-block;
+      width: 250px;
+      margin: 10px 10px 10px 0;
+
+      .contact-icon i {
+        color: @white;
+        float: left;
+        width: 30px;
+        margin-right: 20px;
+        font-size: 30px;
+      }
+
+      .contact-description p {
+        color: @white;
+        padding-top: 5px;
+        margin-left: 10px;
+        font-size: 16px;
+      }
+    }
+
+  }
+
+}
+
+#contact-right {
+  form .form-control {
+    margin-bottom: 30px;
+    padding: 20px;
+    font-size: 14px;
+    color: @gray-white;
+  }
+}
+
+.content-underline-white {
+  margin: 60px 0 30px;
+  width: 100%;
+  height: 1px;
+  background-color: @white;
+}
+
+.footer p {
+  color: @white;
+  font-size: 14px;
+}
+
+/*
+  ================= NAVIGATION SECTION ===================
+*/
+
+.navbar {
+  padding: 43px 0;
+}
+
+.dreams-nav-wrapper {
+  padding: 0 162px;
+}
+
+.navbar-brand {
+
+}
+
+.navbar-nav {
+  float: right;
+}
+
+.navbar-nav li a {
+  color: @white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
